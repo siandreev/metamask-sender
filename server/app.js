@@ -11,6 +11,9 @@ app.get("/api", (req, res) => {
    res.send(JSON.stringify({to, value}));
 });
 
+app.use(express.static('../client'));
+
+
 app.listen('8080', () => {
    console.log("Server started on 8080 port.")
 });
